@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Divider, Header, Image, List, Modal, Button, Icon } from 'semantic-ui-react';
+import { Container, Header, Image, List } from 'semantic-ui-react';
 import TwitterInfoModal from './TwitterInfoModal.js';
 import mastodonIcon from './mastodon.svg';
 import qiitaIcon from './qiita.png';

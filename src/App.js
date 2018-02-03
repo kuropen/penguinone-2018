@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Divider, Dropdown, Grid, Header, Image, List, Menu, Segment } from 'semantic-ui-react';
+import { Container, Header, Image, Menu, Segment } from 'semantic-ui-react';
 import logo from './penguin.png';
 import SocialNet from './SocialNet/SocialNet.js';
 import './App.css';

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Divider, Header, Image, List, Modal, Button, Icon } from 'semantic-ui-react';
+import { Header, Modal, Button, Icon } from 'semantic-ui-react';
 
 class TwitterInfoModal extends Component {
   constructor(props) {
