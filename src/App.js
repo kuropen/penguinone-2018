@@ -34,8 +34,7 @@ class App extends Component {
         <Segment
           inverted
           vertical
-          style={{ margin: '5em 0em 0em' }}
-        >
+          style={{ margin: '5em 0em 0em' }}>
           <Container textAlign='center'>
             <p>All rights reserved. Copyright &copy; Kuropen.</p>
           </Container>
