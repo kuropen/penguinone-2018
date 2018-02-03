@@ -9,6 +9,7 @@ script:
 - npm run build
 deploy:
   provider: s3
+  skip_cleanup: true
   bucket: kuropen.org
   access_key_id: AKIAIVYV7PWVZZJIK2VA
   local_dir: build
