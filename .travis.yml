@@ -13,6 +13,7 @@ deploy:
   bucket: kuropen.org
   access_key_id: AKIAIVYV7PWVZZJIK2VA
   local_dir: build
+  endpoint: s3-ap-northeast-1.amazonaws.com
   on:
     branch: master
   secret_access_key:
