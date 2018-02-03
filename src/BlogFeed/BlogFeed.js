@@ -21,30 +21,36 @@ function BlogFeedList(props) {
 class BlogFeed extends Component {
   constructor(props) {
     super(props);
-    this.state = {goatFeed: null};
+    this.state = {goatFeed: null, loaderActive: true};
   }
   getGoatFeed() {
     fetch('https://feedproxy.kuropen.org/prd-v1/goat').then((response) => {
       return response.json();
     }).then((json) => {
-      this.setState({goatFeed: json});
+      this.setState({goatFeed: json, loaderActive: false});
       console.log(json);
     }).catch((ex) => {
+      this.setState({goatFeed: null, loaderActive: false});
       console.log('Feed Parse Error', ex);
     })
   }
   render() {
     let listObj = null;
+    const loaderActive = this.state.loaderActive;
     if (this.state.goatFeed == null) {
       this.getGoatFeed();
     } else {
       listObj = <BlogFeedList feed={this.state.goatFeed} />;
     }
     return (
-      <Segment>
-        <Header as='h2'>Blog Feed @ <a href="https://kuropen.goat.me/">Y.O.N.O.</a></Header>
-        {listObj}
-      </Segment>
+      <Segment.Group>
+        <Segment>
+          <Header as='h2'>Blog Feed @ <a href="https://kuropen.goat.me/">Y.O.N.O.</a></Header>
+        </Segment>
+        <Segment loading={loaderActive} style={{minHeight: '60px'}}>
+          {listObj}
+        </Segment>
+      </Segment.Group>
     )
   }
 }
