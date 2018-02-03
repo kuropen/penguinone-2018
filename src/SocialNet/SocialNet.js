@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Header, Image, List } from 'semantic-ui-react';
+import { Segment, Header, Image, List } from 'semantic-ui-react';
 import TwitterInfoModal from './TwitterInfoModal.js';
 import mastodonIcon from './mastodon.svg';
 import qiitaIcon from './qiita.png';
@@ -14,7 +14,7 @@ class SocialNet extends Component {
   }
   render() {
     return (
-      <Container>
+      <Segment>
         <Header as='h2'>Social Network</Header>
         <List divided relaxed>
           <List.Item>
@@ -71,7 +71,7 @@ class SocialNet extends Component {
           </List.Item>
         </List>
         <TwitterInfoModal ref={(modal) => {this.twInfoModal = modal;}} />
-      </Container>
+      </Segment>
     );
   }
 }
