@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Container, Header, Image, Menu, Segment } from 'semantic-ui-react';
+import { Container, Image, Menu, Segment } from 'semantic-ui-react';
 import logo from './penguin.png';
-import SocialNet from './SocialNet/SocialNet.js';
+import Top from './Top/Top.js';
 import './App.css';
 
 class App extends Component {
@@ -24,11 +24,7 @@ class App extends Component {
         </Menu>
 
         <Container text style={{ marginTop: '7em' }}>
-          <Header as='h1'>Penguinone - Kuropen's Personal Web</Header>
-          <p>このサイトはKuropenの個人サイトです。</p>
-          
-          <SocialNet />
-          
+          <Top />
         </Container>
 
         <Segment
