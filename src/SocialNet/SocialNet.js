@@ -14,8 +14,11 @@ class SocialNet extends Component {
   }
   render() {
     return (
+    <Segment.Group>
       <Segment>
         <Header as='h2'>Social Network</Header>
+      </Segment>
+      <Segment>
         <List divided relaxed>
           <List.Item>
             <Image size='mini' src={mastodonIcon} />
@@ -72,6 +75,7 @@ class SocialNet extends Component {
         </List>
         <TwitterInfoModal ref={(modal) => {this.twInfoModal = modal;}} />
       </Segment>
+    </Segment.Group>
     );
   }
 }
