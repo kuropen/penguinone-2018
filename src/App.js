@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import { Container, Image, Menu, Segment } from 'semantic-ui-react';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import logo from './penguin.png';
 import Top from './Top/Top.js';
+import Profile from './Profile/Profile.js';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
+    <Router>
       <div>
         <Menu fixed='top' inverted>
           <Container>
@@ -18,13 +21,17 @@ class App extends Component {
               />
               Penguinone
             </Menu.Item>
-            <Menu.Item as='a'>Home</Menu.Item>
+            <Menu.Item><Link to='/'>Home</Link></Menu.Item>
+            <Menu.Item><Link to='/profile'>Profile</Link></Menu.Item>
             <Menu.Item as='a' href='https://don.akabe.co/' target='_blank'>becodon</Menu.Item>
           </Container>
         </Menu>
 
         <Container text style={{ marginTop: '7em' }}>
-          <Top />
+          <Switch>
+            <Route exact path="/" component={Top} />
+            <Route exact path="/profile" component={Profile} />
+          </Switch>
         </Container>
 
         <Segment
@@ -36,6 +43,7 @@ class App extends Component {
           </Container>
         </Segment>
       </div>
+    </Router>
     );
   }
 }

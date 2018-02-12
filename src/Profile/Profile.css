@@ -1,0 +1,9 @@
+.idxnavi {
+  position: fixed;
+  top: 7em;
+  left: 10px;
+}
+
+.mobilemode ul {
+  padding-left: 15px;
+}
