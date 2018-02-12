@@ -21,8 +21,12 @@ class App extends Component {
               />
               Penguinone
             </Menu.Item>
-            <Menu.Item><Link to='/'>Home</Link></Menu.Item>
-            <Menu.Item><Link to='/profile'>Profile</Link></Menu.Item>
+            <Menu.Item as={Link} to='/'>
+              Home
+            </Menu.Item>
+            <Menu.Item as={Link} to='/profile'>
+              Profile
+            </Menu.Item>
             <Menu.Item as='a' href='https://don.akabe.co/' target='_blank'>becodon</Menu.Item>
           </Container>
         </Menu>

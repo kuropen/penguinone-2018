@@ -3,10 +3,9 @@ import { Segment, Header, List } from 'semantic-ui-react';
 import 'whatwg-fetch';
 
 function BlogFeedList(props) {
-  console.log(props);
   const listItems = props.feed.items.map((feed) => {
     return (
-      <List.Item>
+      <List.Item key={feed.link}>
         <List.Content>
           <List.Header as='a' href={feed.link} target='_blank'>{feed.title}</List.Header>
         </List.Content>
@@ -28,7 +27,6 @@ class BlogFeed extends Component {
       return response.json();
     }).then((json) => {
       this.setState({goatFeed: json, loaderActive: false});
-      console.log(json);
     }).catch((ex) => {
       this.setState({goatFeed: null, loaderActive: false});
       console.log('Feed Parse Error', ex);
