@@ -8,7 +8,7 @@ class Top extends Component {
     return (
       <Container>
         <Header as='h1'>Penguinone - Kuropen&#39;s Personal Web</Header>
-        <Responsive as='Container' minWidth={Responsive.onlyTablet.minWidth}>
+        <Responsive as={Container} minWidth={Responsive.onlyTablet.minWidth}>
           <Grid columns={2}>
             <Grid.Row>
               <Grid.Column>
@@ -20,7 +20,7 @@ class Top extends Component {
             </Grid.Row>
           </Grid>
         </Responsive>
-        <Responsive as='Container' {...Responsive.onlyMobile}>
+        <Responsive as={Container} {...Responsive.onlyMobile}>
           <Container>
             <SocialNet />
           </Container>

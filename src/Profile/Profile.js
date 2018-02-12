@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Segment, Menu, Button, Icon, Container, Modal, Responsive } from 'semantic-ui-react';
-import * as Scroll  from 'react-scroll';
+import * as Scroll from 'react-scroll';
 import './Profile.css'
 
 const $ = require('jquery');
@@ -19,7 +19,6 @@ class Profile extends Component {
     fetch('https://feedproxy.kuropen.org/prd-v1/profile').then((response) => {
       return response.json();
     }).then((json) => {
-      console.log(json);
       if (json.md == null) {
         console.log('Invalid JSON.', json);
       }
@@ -38,7 +37,6 @@ class Profile extends Component {
       };
       itemsList.push(newItem);
     }
-    console.log(itemsList);
     return itemsList;
   }
   showIndexModal() {
@@ -103,17 +101,17 @@ class Profile extends Component {
             </Button>
           </Modal.Actions>
         </Modal>
-        <Responsive as='Container' className='idxnavi' minWidth={Responsive.onlyTablet.minWidth}>
+        <Responsive as={Container} className='idxnavi' minWidth={Responsive.onlyTablet.minWidth}>
           <Button size='large' onClick={this.showIndexModal.bind(this)}>
             <Icon name='unordered list' />目次
           </Button>
         </Responsive>
-        <Responsive as='Container' minWidth={Responsive.onlyTablet.minWidth}>
+        <Responsive as={Container} minWidth={Responsive.onlyTablet.minWidth}>
           <Segment className='mdProfile' loading={loaderActive} style={{minHeight: '60px'}}>
             {profileBody}
           </Segment>
         </Responsive>
-        <Responsive as='Container' {...Responsive.onlyMobile}>
+        <Responsive as={Container} {...Responsive.onlyMobile}>
           <Segment className='mdProfile mobilemode' loading={loaderActive} style={{minHeight: '60px'}}>
             {profileBody}
           </Segment>
