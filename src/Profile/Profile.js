@@ -101,7 +101,8 @@ class Profile extends Component {
             </Button>
           </Modal.Actions>
         </Modal>
-        <Responsive as={Container} className='idxnavi' minWidth={Responsive.onlyComputer.minWidth}>
+        <Responsive as={Container} className='idxnavi' minWidth={Responsive.onlyComputer.minWidth}
+          style={{display: loaderActive ? 'none' : 'inline-block'}}>
           <Button size='large' onClick={this.showIndexModal.bind(this)}>
             <Icon name='unordered list' />目次
           </Button>
