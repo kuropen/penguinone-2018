@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Image, Menu, Segment } from 'semantic-ui-react';
+import { Container, Image, Menu, Segment, Responsive, Icon } from 'semantic-ui-react';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import logo from './penguin.png';
 import Top from './Top/Top.js';
@@ -13,7 +13,7 @@ class App extends Component {
       <div>
         <Menu fixed='top' inverted>
           <Container>
-            <Menu.Item as='a' header>
+            <Menu.Item as={Link} to='/' header>
               <Image
                 size='mini'
                 src={logo}
@@ -21,13 +21,14 @@ class App extends Component {
               />
               Penguinone
             </Menu.Item>
-            <Menu.Item as={Link} to='/'>
-              Home
-            </Menu.Item>
             <Menu.Item as={Link} to='/profile'>
-              Profile
+              <Responsive as='span' minWidth={Responsive.onlyTablet.minWidth}>
+                Profile
+              </Responsive>
+              <Responsive as='span' {...Responsive.onlyMobile}>
+                <Icon name='user circle outline' size='large' />
+              </Responsive>
             </Menu.Item>
-            <Menu.Item as='a' href='https://don.akabe.co/' target='_blank'>becodon</Menu.Item>
           </Container>
         </Menu>
 
