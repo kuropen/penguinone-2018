@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Segment, Header, Image, List } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 import TwitterInfoModal from './TwitterInfoModal.js';
 import mastodonIcon from './mastodon.svg';
 import qiitaIcon from './qiita.png';
@@ -23,7 +24,7 @@ class SocialNet extends Component {
           <List.Item>
             <Image size='mini' src={mastodonIcon} />
             <List.Content>
-              <List.Header as='a' href='https://don.akabe.co/@kuropen' target='_blank'>
+              <List.Header as={Link} to='/mastodon'>
                 Mastodon (becodon)
               </List.Header>
             </List.Content>
