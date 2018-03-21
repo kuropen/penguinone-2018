@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import logo from './penguin.png';
 import Top from './Top/Top.js';
 import Profile from './Profile/Profile.js';
+import Mastodon from './SocialNet/Mastodon.js';
+import mastodonLogo from './SocialNet/mastodon.svg';
 import './App.css';
 
 class App extends Component {
@@ -29,6 +31,14 @@ class App extends Component {
                 <Icon name='user circle outline' size='large' />
               </Responsive>
             </Menu.Item>
+            <Menu.Item as={Link} to='/mastodon'>
+              <Responsive as='span' minWidth={Responsive.onlyTablet.minWidth}>
+                Mastodon
+              </Responsive>
+              <Responsive as='span' {...Responsive.onlyMobile}>
+                <Image size='mini' src={mastodonLogo} />
+              </Responsive>
+            </Menu.Item>
           </Container>
         </Menu>
 
@@ -36,6 +46,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Top} />
             <Route exact path="/profile" component={Profile} />
+            <Route exact path="/mastodon" component={Mastodon} />
           </Switch>
         </Container>
 
