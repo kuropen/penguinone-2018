@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Segment, Header, Image, List } from 'semantic-ui-react';
 import TwitterInfoModal from './TwitterInfoModal.js';
-import mastodonIcon from './mastodon.svg';
+import activityPubIcon from './activitypub.png';
 import qiitaIcon from './qiita.png';
 
 class SocialNet extends Component {
@@ -21,11 +21,15 @@ class SocialNet extends Component {
       <Segment>
         <List divided relaxed>
           <List.Item>
-            <Image size='mini' src={mastodonIcon} />
+            <Image size='mini' src={activityPubIcon} />
             <List.Content>
-              <List.Header as='a' href='https://don.akabe.co/@kuropen' target='_blank'>
-                Mastodon (becodon)
+              <List.Header as='a' href='https://talknet.akabe.co/' target='_blank'>
+                Pleroma (akabeco TaLKNet)
               </List.Header>
+              <List.Description as='a' href='https://talknet.akabe.co/' target='_blank'>
+                ID: @kuropen@talknet.akabe.co<br />
+                ※ Mastodonと互換性があります
+              </List.Description>
             </List.Content>
           </List.Item>
           <List.Item>
@@ -42,6 +46,9 @@ class SocialNet extends Component {
               <List.Header as='a' href='https://github.com/kuropen' target='_blank'>
                 GitHub
               </List.Header>
+              <List.Description as='a' href='https://github.com/kuropen' target='_blank'>
+                ID: kuropen
+              </List.Description>
             </List.Content>
           </List.Item>
           <List.Item>
@@ -50,17 +57,19 @@ class SocialNet extends Component {
               <List.Header as='a' href='https://instagram.com/kuropen' target='_blank'>
                 Instagram
               </List.Header>
+              <List.Description as='a' href='https://instagram.com/kuropen' target='_blank'>
+                ID: @kuropen
+              </List.Description>
             </List.Content>
           </List.Item>
           <List.Item>
             <List.Icon name='twitter square' size='big' verticalAlign='middle' />
             <List.Content>
-              <List.Header as='a' onClick={this.handleClickTwitterLink.bind(this)}>
+              <List.Header as='a' onClick='https://twitter.com/kuropen_aizu'>
                 Twitter
               </List.Header>
-              <List.Description as='a' onClick={this.handleClickTwitterLink.bind(this)}
-                  style={{fontWeight: 'bold', textDecoration: 'underline'}}>
-                  お知らせ: Twitterの運用縮小について
+              <List.Description as='a' onClick='https://twitter.com/kuropen_aizu'>
+                ID: @kuropen_aizu
               </List.Description>
             </List.Content>
           </List.Item>
@@ -70,6 +79,9 @@ class SocialNet extends Component {
               <List.Header as='a' href='https://qiita.com/kuropen' target='_blank'>
                 Qiita
               </List.Header>
+              <List.Description as='a' href='https://qiita.com/kuropen' target='_blank'>
+                ID: kuropen
+              </List.Description>
             </List.Content>
           </List.Item>
         </List>
