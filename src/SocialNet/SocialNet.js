@@ -1,17 +1,9 @@
 import React, { Component } from 'react';
 import { Segment, Header, Image, List } from 'semantic-ui-react';
-import TwitterInfoModal from './TwitterInfoModal.js';
 import activityPubIcon from './activitypub.png';
 import qiitaIcon from './qiita.png';
 
 class SocialNet extends Component {
-  constructor(props) {
-    super(props);
-    this.twInfoModal = null;
-  }
-  handleClickTwitterLink() {
-    this.twInfoModal.open();
-  }
   render() {
     return (
     <Segment.Group>
@@ -85,7 +77,6 @@ class SocialNet extends Component {
             </List.Content>
           </List.Item>
         </List>
-        <TwitterInfoModal ref={(modal) => {this.twInfoModal = modal;}} />
       </Segment>
     </Segment.Group>
     );
