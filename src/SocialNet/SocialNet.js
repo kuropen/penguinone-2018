@@ -13,14 +13,13 @@ class SocialNet extends Component {
       <Segment>
         <List divided relaxed>
           <List.Item>
-            <Image size='mini' src={activityPubIcon} />
+            <List.Icon name='twitter square' size='big' verticalAlign='middle' />
             <List.Content>
-              <List.Header as='a' href='https://talknet.akabe.co/' target='_blank'>
-                Pleroma (akabeco TaLKNet)
+              <List.Header as='a' href='https://twitter.com/kuropen_aizu'>
+                Twitter
               </List.Header>
-              <List.Description as='a' href='https://talknet.akabe.co/' target='_blank'>
-                ID: @kuropen@talknet.akabe.co<br />
-                ※ Mastodonと互換性があります
+              <List.Description as='a' href='https://twitter.com/kuropen_aizu'>
+                ID: @kuropen_aizu
               </List.Description>
             </List.Content>
           </List.Item>
@@ -44,6 +43,18 @@ class SocialNet extends Component {
             </List.Content>
           </List.Item>
           <List.Item>
+            <Image size='mini' src={activityPubIcon} />
+            <List.Content>
+              <List.Header as='a' href='https://talknet.akabe.co/' target='_blank'>
+                Pleroma (akabeco TaLKNet)
+              </List.Header>
+              <List.Description as='a' href='https://talknet.akabe.co/' target='_blank'>
+                ID: @kuropen@talknet.akabe.co<br />
+                ※ Mastodonと互換性があります
+              </List.Description>
+            </List.Content>
+          </List.Item>
+          <List.Item>
             <List.Icon name='instagram' size='big' verticalAlign='middle' />
             <List.Content>
               <List.Header as='a' href='https://instagram.com/kuropen' target='_blank'>
@@ -51,17 +62,6 @@ class SocialNet extends Component {
               </List.Header>
               <List.Description as='a' href='https://instagram.com/kuropen' target='_blank'>
                 ID: @kuropen
-              </List.Description>
-            </List.Content>
-          </List.Item>
-          <List.Item>
-            <List.Icon name='twitter square' size='big' verticalAlign='middle' />
-            <List.Content>
-              <List.Header as='a' href='https://twitter.com/kuropen_aizu'>
-                Twitter
-              </List.Header>
-              <List.Description as='a' href='https://twitter.com/kuropen_aizu'>
-                ID: @kuropen_aizu
               </List.Description>
             </List.Content>
           </List.Item>
