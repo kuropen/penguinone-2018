@@ -21,14 +21,14 @@ class App extends Component {
               />
               Penguinone
             </Menu.Item>
-            <Menu.Item as={Link} to='/profile'>
+            {/* <Menu.Item as={Link} to='/profile'>
               <Responsive as='span' minWidth={Responsive.onlyTablet.minWidth}>
                 Profile
               </Responsive>
               <Responsive as='span' {...Responsive.onlyMobile}>
                 <Icon name='user circle outline' size='large' />
               </Responsive>
-            </Menu.Item>
+            </Menu.Item> */}
           </Container>
         </Menu>
 
