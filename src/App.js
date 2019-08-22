@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Container, Image, Menu, Segment, Responsive, Icon } from 'semantic-ui-react';
+// import { Container, Image, Menu, Segment, Responsive, Icon } from 'semantic-ui-react';
+import { Container, Image, Menu, Segment } from 'semantic-ui-react';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import logo from './penguin.png';
 import Top from './Top/Top.js';
