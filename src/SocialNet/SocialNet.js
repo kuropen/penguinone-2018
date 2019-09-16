@@ -1,7 +1,16 @@
 import React, { Component } from 'react';
 import { Segment, Header, List } from 'semantic-ui-react';
+import PleromaInfoModal from './PleromaInfoModal.js';
 
 class SocialNet extends Component {
+  constructor(props) {
+    super(props);
+    this.plInfoModal = null;
+  }
+  handleClickPleromaLink() {
+    this.plInfoModal.open();
+  }
+
   render() {
     return (
     <Segment.Group>
@@ -29,12 +38,23 @@ class SocialNet extends Component {
           </List.Item>
           <List.Item>
             <List.Content>
-              <List.Header as='a' href='https://talknet.akabe.co/' target='_blank'>
+              <List.Header as='a' href='https://gingadon.com/@kuropen' target='_blank'>
+                Mastodon (Gingadon)
+              </List.Header>
+              <List.Description as='a' href='https://gingadon.com/@kuropen' target='_blank'>
+                ID: @kuropen@gingadon.com
+              </List.Description>
+            </List.Content>
+          </List.Item>
+          <List.Item>
+            <List.Content>
+              <List.Header as='a' onClick={this.handleClickPleromaLink.bind(this)}>
                 Pleroma (akabeco TaLKNet)
               </List.Header>
-              <List.Description as='a' href='https://talknet.akabe.co/' target='_blank'>
+              <List.Description as='a' onClick={this.handleClickPleromaLink.bind(this)}>
                 ID: @kuropen@talknet.akabe.co<br />
-                ※ Mastodonと互換性があります
+                ※ Mastodonと互換性があります<br />
+                <strong>※近日シャットダウン予定</strong>
               </List.Description>
             </List.Content>
           </List.Item>
@@ -80,6 +100,7 @@ class SocialNet extends Component {
             </List.Content>
           </List.Item>
         </List>
+        <PleromaInfoModal ref={(modal) => {this.plInfoModal = modal;}} />
       </Segment>
     </Segment.Group>
     );
